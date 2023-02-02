@@ -1,0 +1,32 @@
+.header {
+    height: 90px;
+    color: $white;
+}
+
+.header-social {
+    display: flex;
+    gap: 25px;
+}
+
+.header-logo img {
+    width: 80.88px
+}
+
+.btn-wallet {
+    color: $coolcats-yellow;
+    border: 1px solid $coolcats-yellow;
+    background-color: transparent;
+    font-weight: bold;
+    width: 160px;
+    height: 44px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    &:hover {
+        color: $coolcats-yellow;
+        border: 1px solid $coolcats-yellow;
+    }
+}

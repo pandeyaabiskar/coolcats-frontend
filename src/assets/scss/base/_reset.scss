@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  font-family: $poppins-font-family;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+html,
+body,
+#root {
+  background-color: $theme-white;
+  color: $black;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+#root{
+  min-width: 350px;
+  // overflow-x: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  html,
+  body,
+  #root {
+    font-size: 12px;
+  }
+}
+

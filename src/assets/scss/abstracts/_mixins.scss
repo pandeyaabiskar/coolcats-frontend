@@ -1,0 +1,147 @@
+/* stylelint-disable  property-no-vendor-prefix,unit-allowed-list,scss/at-mixin-pattern, declaration-no-important */
+//media-query
+@mixin max-break-point($point) {
+  $mobile-phone: 576px;
+
+  $tablet: 768px;
+
+  $tablet-landscape: 991px;
+
+  $large-desktop: 1200px;
+
+  $larger-desktop: 1400px;
+
+  @if $point == mobile-phone {
+    @media (max-width: #{$mobile-phone}) {
+      @content;
+    }
+  }
+
+  @if $point == tablet {
+    @media (max-width: #{$tablet}) {
+      @content;
+    }
+  }
+
+  @if $point == tablet-landscape {
+    @media (max-width:  #{$tablet-landscape}) {
+      @content;
+    }
+  }
+
+  @if $point == large-desktop {
+    @media (max-width:#{$large-desktop}) {
+      @content;
+    }
+  }
+
+  @if $point == larger-desktop {
+    @media (max-width:#{$larger-desktop}) {
+      @content;
+    }
+  }
+}
+
+@mixin min-break-point($point) {
+  $mobile-phone: 576px;
+
+  $tablet: 768px;
+
+  $tablet-landscape: 991px;
+
+  $large-desktop: 1200px;
+
+  $larger-desktop: 1400px;
+
+  @if $point == mobile-phone {
+    @media (min-width: #{$mobile-phone}) {
+      @content;
+    }
+  }
+
+  @if $point == tablet {
+    @media (min-width: #{$tablet}) {
+      @content;
+    }
+  }
+
+  @if $point == tablet-landscape {
+    @media (min-width:  #{$tablet-landscape}) {
+      @content;
+    }
+  }
+
+  @if $point == large-desktop {
+    @media (min-width:#{$large-desktop}) {
+      @content;
+    }
+  }
+
+  @if $point == larger-desktop {
+    @media (min-width:#{$larger-desktop}) {
+      @content;
+    }
+  }
+}
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+@mixin translate-XY($x-axis, $y-axis) {
+  -webkit-transform: translate($x-axis, $y-axis);
+  -moz-transform: translate($x-axis, $y-axis);
+  -o-transform: translate($x-axis, $y-axis);
+  -ms-transform: translate($y-axis);
+  transform: translate($x-axis, $y-axis);
+}
+
+@mixin scale($value, $secondValue: null) {
+  @if $secondValue {
+    -webkit-transform: scale($value, $secondValue);
+    -moz-transform: scale($value, $secondValue);
+    -o-transform: scale($value, $secondValue);
+    -ms-transform: scale($value, $secondValue);
+    transform: scale($value, $secondValue);
+  } @else {
+    -webkit-transform: scale($value);
+    -moz-transform: scale($value);
+    -o-transform: scale($value);
+    -ms-transform: scale($value);
+    transform: scale($value);
+  }
+}
+
+@mixin translate-Y($y-axis) {
+  -webkit-transform: translateY($y-axis);
+  -moz-transform: translateY($y-axis);
+  -o-transform: translateY($y-axis);
+  -ms-transform: translateY($y-axis);
+  transform: translateY($y-axis);
+}
+
+@mixin translate-X($x-axis) {
+  -webkit-transform: translateX($x-axis);
+  -moz-transform: translateX($x-axis);
+  -o-transform: translateX($x-axis);
+  -ms-transform: translateX($x-axis);
+  transform: translateX($x-axis);
+}
+
+// when naming with box-shadow, the box-shadow doesn't seems to work.
+
+@mixin custom-box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+@mixin size($height, $width: $height) {
+  height: $height;
+  width: $width;
+}
+
+/* stylelint-enable property-no-vendor-prefix,unit-allowed-list, declaration-no-important  */

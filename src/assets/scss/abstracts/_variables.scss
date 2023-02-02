@@ -1,0 +1,152 @@
+$white: #fff;
+$black: #000;
+
+$theme-black: #131213;
+$theme-white: #fff;
+
+$primary: #37b772;
+$warning: #ffcd39;
+$secondary: #0c1e4e;
+$danger: #e35d6a;
+$orange: #f2994a;
+
+$coolcats-yellow: #FAD121;
+
+//grey
+$grey: #f8f7fa;
+$grey-100: #f8f9fa;
+$grey-200: #eaeaea;
+$grey-300: #dee2e6;
+$grey-400: #c4c4c4;
+$grey-500: #adb5bd;
+$grey-600: #535353;
+$grey-700: #707070;
+$grey-800: #272727;
+$grey-900: #050721;
+
+//red
+$red-100: #f8d7da;
+$red-200: #f1aeb5;
+$red-300: #ea868f;
+$red-400: #e35d6a;
+$red-500: #f52f57;
+$red-600: #b02a37;
+$red-700: #842029;
+$red-800: #58151c;
+$red-900: #2c0b0e;
+
+//green
+$green-100: #d1e7dd;
+$green-200: #a3cfbb;
+$green-300: #75b798;
+$green-400: #0eaa4d;
+$green-500: #198754;
+$green-600: #146c43;
+$green-700: #0f5132;
+$green-800: #0a3622;
+$green-900: #051b11;
+
+$dark-green: #0a1c0e;
+$bush-green: #112e17;
+
+//BROWN
+$brown-400: #5e5050;
+$brown-700: #322827;
+
+//Yellow
+
+$yellow-400: #e7c254;
+$yellow-300: #d4e458;
+
+//dark
+$dark-100: #231e1d;
+$dark-200: #313131;
+$dark-300: #151515;
+$dark-800: #181818;
+$dark-900: #181616;
+
+// $lime-400:#D4E458;
+//primary shades color
+// $primary-light-color: #2adc89;
+// $primary-dark-color: #17a663;
+
+//overlay
+$primary-overlay: rgba(0, 0, 0, 0.5);
+$primary-rgba-color: rgba(14, 170, 77, 0.2);
+$modal-overlay: rgba(0, 0, 0, 0.12);
+
+$bg-dark-opaque: rgba(0, 0, 0, 0.4);
+
+//font family
+$neutrif-pro-font-family: Neutrif, sans-serif;
+$acumin-pro-font-family: Acumin, sans-serif;
+$acme-font-familt: 'Croissant One', cursive;
+$poppins-font-family: 'Poppins', sans-serif;
+$acme-font-familt: 'Acme', sans-serif;
+$ranika-font-family: 'Ranika', sans-serif;
+$ComicSans-font-family: ComicSans, sans-serif;
+
+$font-size-base: 1rem;
+//font-weight
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+
+//font-sizes
+$h1-font-size: 2.9rem;
+$h2-font-size: 2.5rem;
+$h3-font-size: 2rem;
+$h4-font-size: 1.2rem;
+$h5-font-size: 1.125rem;
+$p-font-size: 1rem;
+$span-font-size: 0.75rem;
+
+//line height
+$h1-line-height: 4.5rem;
+$h2-line-height: 3.25rem;
+$h3-line-height: 2.625rem;
+$h4-line-height: 1.93rem;
+$h5-line-height: 1.5rem;
+$p-line-height: 1rem;
+$span-line-height: 0.75rem;
+
+$border-radius-xl: 1rem;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+// scss-docs-start input-btn-variables
+$input-btn-padding-y: 0.75rem;
+$input-btn-padding-x: 1.225rem;
+$input-btn-line-height: 1.5;
+$input-btn-font-size: 1rem;
+
+$input-padding-y: 0.75rem;
+$input-padding-x: 1.125rem;
+$input-color: $white;
+$input-focus-box-shadow: none;
+$input-bg: $dark-800;
+
+$input-border-color: $dark-200;
+$input-border-radius: 0.625rem;
+$input-border-width: 0.0625rem;
+
+$input-focus-bg: $dark-800;
+$input-focus-border-color: $dark-200;
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+// scss-docs-start alert-variables
+$alert-padding-y: 0.75rem;
+$alert-padding-x: 0.875rem;
+
+$tablet: 768px;
+
+$tablet-landscape: 991px;
+
+$large-desktop: 1200px;
+
+$larger-desktop: 1400px;

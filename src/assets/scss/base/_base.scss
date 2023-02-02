@@ -1,0 +1,352 @@
+main {
+  padding: 3rem 0;
+  margin-top: 4.5rem;
+  @media screen and (max-width: 768px) {
+  padding: 1rem 0;
+    
+  }
+}
+button {
+  border-radius: 0.25em;
+  font-family: $poppins-font-family;
+  font-size: $h5-font-size;
+
+  &:active,
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+a {
+  cursor: pointer;
+  font-size: $p-font-size;
+  line-height: $p-line-height;
+  text-decoration: none;
+
+  // &:hover,
+  // &:focus {
+  //   text-decoration: underline;
+  // }
+}
+
+input {
+  border-radius: 0.25em;
+  font-size: $span-font-size;
+  height: 3.375em;
+  line-height: $span-line-height;
+  width: 28.125em;
+
+  &.checked,
+  &.radio {
+    @include size(0.875em);
+  }
+
+  &::placeholder {
+    font-size: $span-font-size;
+    line-height: $span-line-height;
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  @include size(0.875em);
+
+  &:checked {
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+h1 {
+  font-family: $acme-font-familt;
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+}
+
+h2 {
+  font-family: $acme-font-familt;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+}
+
+h3 {
+  font-family: $acme-font-familt;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+}
+
+h4 {
+  font-family: $acme-font-familt;
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+}
+
+h5 {
+  @extend .fw-normal;
+
+  font-family: $acme-font-familt;
+  font-size: $h5-font-size;
+  line-height: $h5-line-height;
+}
+
+p {
+  font-family: $poppins-font-family;
+  font-size: $p-font-size;
+  line-height: $h5-line-height;
+}
+
+label {
+  color: $grey-700;
+  font-family: $poppins-font-family;
+  font-size: $p-font-size;
+  line-height: $h5-line-height;
+}
+
+.font-family-primary {
+  font-family: $acme-font-familt;
+}
+.font-family-ranika {
+  font-family: $ranika-font-family !important;
+}
+.font-family-comic-sans {
+  font-family: $ComicSans-font-family;
+}
+
+.small {
+  font-size: 0.5rem;
+}
+
+.bg-dark-opaque {
+  background-color: $bg-dark-opaque;
+}
+
+.bg-dark-md {
+  background: url('../../images/sprite.png') -65px -198px;
+  width: 316px;
+  height: 108px;
+}
+
+.shrooms-bg-dark-md {
+  @extend .bg-dark-md;
+
+    background: rgba(24, 24, 24, 0.7) 0px 0px;
+    width: 445px;
+    height: 188px;
+    background-size: contain;
+}
+
+.text-muted {
+  color: $grey-400 !important;
+}
+
+.fw-semibold {
+  font-weight: $font-weight-semibold;
+}
+.fw-medium {
+  font-weight: $font-weight-medium;
+}
+.fs-9 {
+  font-size: 0.625rem;
+}
+
+.fs-8 {
+  font-size: 0.75rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.625rem;
+  }
+}
+
+.fs-7 {
+  font-size: 0.875rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.625rem;
+  }
+}
+
+.rounded-xl {
+  border-radius: $border-radius-xl;
+}
+
+.text-green {
+  color: $green-400 !important;
+}
+
+.text-yellow {
+  color: $yellow-400 !important;
+}
+
+.text-yellow-3 {
+  color: $yellow-300 !important;
+}
+
+.text-red {
+  color: $red-500 !important;
+}
+
+.pr-8 {
+  padding-right: 2rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.bg-dark-100 {
+  background-color: $dark-100;
+}
+
+.bg-dark-900 {
+  background-color: $dark-900;
+}
+
+.z-index-100 {
+  z-index: 100;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.font-family-acme {
+  font-family: $acme-font-familt !important;
+}
+.font-family-poppins {
+  font-family: $poppins-font-family;
+}
+
+.line-height-140 {
+  line-height: 140% !important;
+}
+.line-height-170 {
+  line-height: 170% !important;
+}
+
+.loading-animation {
+  animation: mymove 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes mymove {
+  to {
+    width: 100%;
+    height: 100%;
+  }
+  from {
+    width: 54%;
+    height: 54%;
+  }
+}
+.max-w-50p {
+  max-width: 160px;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.dark-black-bg {
+  background: #0c130e;
+}
+.dark-green-bg {
+  background: $dark-green;
+}
+.bush-green-bg {
+  background: $bush-green;
+}
+.wonder-green-bg {
+  background: rgb(14, 170, 77, 0.2);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.homepage-body-text {
+  font-size: 1.5rem;
+  line-height: 170%;
+}
+.text-gray {
+  color: $grey-200 !important;
+}
+.fs-3 {
+  font-size: 2.25rem !important;
+  @media screen and (max-width: 767px) {
+    font-size: 2rem !important;
+    &-sm {
+      font-size: 1.2rem !important;
+    }
+  }
+}
+
+.tooltip {
+  max-width: 15rem;
+}
+@media screen and (max-width: 767px) {
+  .sm-fs-5 {
+    font-size: 0.75rem !important ;
+  }
+}
+
+.margin-0-auto {
+  margin: 0px auto;
+}
+.scaled-down {
+  zoom: 0.8;
+}
+
+.text-hover-bold {
+  &:hover {
+    font-weight: 600;
+  }
+}
+
+
+.checkbox-round {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: gray;
+}
+
+.cursor-no-drop {
+  cursor: no-drop !important;
+}
