@@ -12,6 +12,7 @@ import { useLayout } from "../../../hoc/LayoutProvider";
 import { socialContentData } from "../../../constants";
 import { IconButton } from "@mui/material";
 import { HEADER } from "../../../constants/images";
+import DelegateCashButton from "delegatecash-button-react";
 
 export const NavBar = () => {
   const { connect, account, isActive, disconnect } =
@@ -29,52 +30,61 @@ export const NavBar = () => {
   return (
     <>
       <HeaderWrapper>
-          <div className="container">
-            <SocialContentWrapper>
-              {socialContentData.map(({ Icon, title, link }, idx) => (
-                <a
-                  className="social"
-                  key={`social_${idx}`}
-                  href={link}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Icon />
-                </a>
-              ))}
-            </SocialContentWrapper>
-            <div className="header-logo" onClick={() => handleLinkClick("/")}>
-              <img src={HEADER.LOGO} />
-            </div>
-            <div className="header-btn">
-              {isActive ? (
-                // <span className='main-link'>
-                <Popconfirm
-                  overlayClassName={"wallet-disconnect-popover"}
-                  okText={"Yes"}
-                  onConfirm={disconnect}
-                  title={"Disconnect Wallet?"}
-                >
-                  <Button
-                    btntext={`${limitCharacter(account || "", 5, true)}`}
-                    className="btn-wallet"
-                    btntype="neutral"
-                    btnSize="very-small"
+        <div className="container">
+          <SocialContentWrapper>
+            {socialContentData.map(({ Icon, title, link }, idx) => (
+              <a
+                className="social"
+                key={`social_${idx}`}
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon />
+              </a>
+            ))}
+          </SocialContentWrapper>
+          <div className="header-logo" onClick={() => handleLinkClick("/")}>
+            <img src={HEADER.LOGO} />
+          </div>
+          <div className="header-btn">
+            {isActive ? (
+              // <span className='main-link'>
+              <Popconfirm
+                overlayClassName={"wallet-disconnect-popover"}
+                okText={"Yes"}
+                onConfirm={disconnect}
+                title={"Disconnect Wallet?"}
+              >
+                <>
+                <DelegateCashButton
+                  connectedWallet={`0x0000000000000000000000000000000000000001`}
+                  rpcUrl="https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+                  rounded={true}
+                  onButtonClick={(event:any) => console.log(event.detail)}
+                  onWalletSelect={(event:any) => console.log(event.detail)}
                   />
-                </Popconfirm>
-              ) : (
-                <Button
-                  btntext="Connect"
+                  </>
+                {/* <Button
+                  btntext={`${limitCharacter(account || "", 5, true)}`}
                   className="btn-wallet"
-                  onClick={() => {
-                    connect && connect();
-                  }}
                   btntype="neutral"
                   btnSize="very-small"
-                />
-              )}
-            </div>
+                /> */}
+              </Popconfirm>
+            ) : (
+              <Button
+                btntext="Connect"
+                className="btn-wallet"
+                onClick={() => {
+                  connect && connect();
+                }}
+                btntype="neutral"
+                btnSize="very-small"
+              />
+            )}
           </div>
+        </div>
       </HeaderWrapper>
       <NavbarWrapper>
         <div className="container">
@@ -91,7 +101,7 @@ export const NavBar = () => {
 };
 
 const HeaderWrapper = styled.div`
-    background-color: #231f20;
+  background-color: #231f20;
 
   .container {
     width: 80%;
@@ -154,7 +164,7 @@ const NavbarWrapper = styled.div`
   }
 
   .nav-link {
-    font-family: 'Herokid';
+    font-family: "Herokid";
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -170,12 +180,10 @@ const NavbarWrapper = styled.div`
   }
 
   .active {
-    background-color: #0094E3;
+    background-color: #0094e3;
     color: #ffffff;
   }
 `;
-
-
 
 const SocialContentWrapper = styled.div`
   display: flex;
